@@ -8,3 +8,7 @@ Invoice Number;Name;Date;Due Date;Activity;Quantity;Quantity Type;Amount;Tax Cat
 40;INVOICE_40;2023-09-26;2023-10-26;Consult;2;Hours;700.0;0.21;147.0;847.0;726.0;Tesla;Draft;Services
 40;INVOICE_40;2023-09-26;2023-10-26;Sales;50;Units;500.0;No Tax;0.0;500.0;0;Tesla;Draft;Sales
 40;INVOICE_40;2023-08-10;2023-10-26;Consult;3;Units;1500.0;0.21;315.0;1815.0;1000.0;Apple;Draft;Services
+41;INVOICE_41;2023-04-19;2023-07-19;Sales;250;Hours;3750.0;0.21;787.5;4537.5;0;Microsoft;Paid;Sales
+41;INVOICE_41;2023-09-26;2023-10-26;Dummy;35;Hours;1050.0;No Tax;0.0;1050.0;0;Microsoft;Draft;Services
+41;INVOICE_41;2023-09-26;2023-10-26;Dummy;35;Hours;1050.0;No Tax;0.0;1050.0;1050.0;Microsoft;Draft;Services
+41;INVOICE_41;2023-06-13;2023-10-26;1;1;Units;3000.0;No Tax;0.0;3000.0;0;Tesla;Draft;Sales

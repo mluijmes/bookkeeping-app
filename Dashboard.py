@@ -62,7 +62,6 @@ if selected == TAB_NAME_0:
             # Total Revenue
             total_revenue = sum(func.get_csv_column(FILEPATH_INVOICES, 'Total Amount'))
             st.metric('Total Revenue', func.format_currency(total_revenue, CURRENCY, CURRENCY_LOCALE, 2),
-                      delta='-5',
                       delta_color='normal',
                       label_visibility='visible')
 
@@ -70,7 +69,6 @@ if selected == TAB_NAME_0:
             # Total Expenses
             total_expenses = sum(func.get_csv_column(FILEPATH_EXPENSES, 'Total Amount'))
             st.metric('Total Expenses', func.format_currency(total_expenses*-1, CURRENCY, CURRENCY_LOCALE, 2),
-                      delta='8',
                       delta_color='normal',
                       label_visibility='visible')
 
@@ -78,7 +76,6 @@ if selected == TAB_NAME_0:
             # Total Hours
             total_hours = sum(func.get_csv_column(FILEPATH_INVOICES, 'Quantity'))
             st.metric('Total Hours', total_hours,
-                      delta='82',
                       delta_color='normal',
                       label_visibility='visible')
 
@@ -197,51 +194,51 @@ if selected == TAB_NAME_0:
             st.altair_chart(combined_chart, use_container_width=True)
 
 
-with st.expander('Client Distribution', expanded=True):
-    c1, c2 = st.columns(2)
-    with c1:
-        st.subheader('Insights')
-        inp1, inp2 = st.columns(2)
-        with inp1:
-            conditional_key = st.selectbox('Grouping', options=['Category', 'Client', 'Status'])
-        with inp2:
-            key = st.selectbox('Filter', options=['Quantity', 'Amount', 'Tax Amount', 'Total Amount'])
+    with st.expander('Client Distribution', expanded=True):
+        c1, c2 = st.columns(2)
+        with c1:
+            st.subheader('Insights')
+            inp1, inp2 = st.columns(2)
+            with inp1:
+                conditional_key = st.selectbox('Grouping', options=['Category', 'Client', 'Status'])
+            with inp2:
+                key = st.selectbox('Filter', options=['Quantity', 'Amount', 'Tax Amount', 'Total Amount'])
 
-        categories = set(func.get_csv_column(FILEPATH_INVOICES, conditional_key))
+            categories = set(func.get_csv_column(FILEPATH_INVOICES, conditional_key))
 
-        keys = func.get_csv_keys(FILEPATH_INVOICES)
+            keys = func.get_csv_keys(FILEPATH_INVOICES)
 
-        category_distribution = func.csv_category_sum(FILEPATH_INVOICES, conditional_key, key)
+            category_distribution = func.csv_category_sum(FILEPATH_INVOICES, conditional_key, key)
 
-        colors = func.assign_color_gradient(list(category_distribution.keys()), primary_color, negative_color)
-        colors_list = list(colors.values())
+            colors = func.assign_color_gradient(list(category_distribution.keys()), primary_color, negative_color)
+            colors_list = list(colors.values())
 
-        df = pd.DataFrame(list(category_distribution.items()), columns=[conditional_key, key])
+            df = pd.DataFrame(list(category_distribution.items()), columns=[conditional_key, key])
 
-        # Create the Altair doughnut chart
-        chart = alt.Chart(df).mark_arc(innerRadius=40).encode(
-            theta=key,
-            color=alt.Color(f'{conditional_key}:N', scale=alt.Scale(range=colors_list)),
-            tooltip=[conditional_key, key]
-        ).properties(
-            width=250,
-            height=250
-        ).interactive()
+            # Create the Altair doughnut chart
+            chart = alt.Chart(df).mark_arc(innerRadius=40).encode(
+                theta=key,
+                color=alt.Color(f'{conditional_key}:N', scale=alt.Scale(range=colors_list)),
+                tooltip=[conditional_key, key]
+            ).properties(
+                width=250,
+                height=250
+            ).interactive()
 
-        col1, col2 = st.columns(2)
+            col1, col2 = st.columns(2)
 
-        # Display the Altair chart in Streamlit
-        st.altair_chart(chart, use_container_width=True)
+            # Display the Altair chart in Streamlit
+            st.altair_chart(chart, use_container_width=True)
 
-    indexing_column = 'Invoice Number'
-    columns_to_return = ['Quantity', 'Amount', 'Tax Amount', 'Total Amount']
+        indexing_column = 'Invoice Number'
+        columns_to_return = ['Quantity', 'Amount', 'Tax Amount', 'Total Amount']
 
-    invoices = func.retrieve_invoices(indexing_column, columns_to_return, FILEPATH_INVOICES)
+        invoices = func.retrieve_invoices(indexing_column, columns_to_return, FILEPATH_INVOICES)
 
-    invoice_df = df = pd.DataFrame.from_dict(invoices, orient='index')
+        invoice_df = df = pd.DataFrame.from_dict(invoices, orient='index')
 
 
-    with c2:
-        st.subheader('Recent Invoices')
-        range = st.selectbox('Show last', [10, 20, 30, 40, 50])
-        st.table(invoice_df[:range])
+        with c2:
+            st.subheader('Recent Invoices')
+            range = st.selectbox('Show last', [10, 20, 30, 40, 50])
+            st.table(invoice_df[:range])

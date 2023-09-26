@@ -8,3 +8,5 @@ Total Amount;Date;Seller or Vendor;Description;Payment Method;Invoice or Receipt
 -120.00;2023-09-15;Office Depot;Stationery Purchase;Debit Card;INV65432;6.00;Office Expenses;USD;attachment7.pdf
 -60.00;2023-09-18;Starbucks;Coffee Meeting;Cash;INV98765;0.00;Meals & Entertainment;USD;attachment8.pdf
 -500.00;2023-09-20;ABC Supplier;Raw Materials;Online Payment;INV11223;25.00;Supplies;USD;attachment9.pdf
+-800.0;2023-09-26;Carl;Office deposit;Credit Card;123;0.21;Rent;USD
+-20.0;2023-09-26;Magazine Hub;;Credit Card;123;;Other;USD
