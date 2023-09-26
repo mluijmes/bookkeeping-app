@@ -2,3 +2,9 @@ Invoice Number;Name;Date;Due Date;Activity;Quantity;Quantity Type;Amount;Tax Cat
 32;INVOICE_32;2023-09-10;2023-10-10;Checking;1;Hours;10.0;No Tax;0.0;10.0;0.0;TU Delft;Draft;Office Supplies
 33;INVOICE_33;2023-03-23;2023-10-10;Piano Sales;8;Hours;4400.0;No Tax;0.0;4400.0;0.0;TU Delft;Draft;Office Supplies
 35;INVOICE_35;2023-09-10;2023-10-10;Testing;55;Hours;1265.0;0.21;265.65;1530.65;0.0;TU Delft;Draft;Legal and Compliance
+39;INVOICE_39;2023-01-03;2023-10-26;Presentation;1;Hours;1000.0;0.21;210.0;1210.0;0;Tesla;Sent;Services
+39;INVOICE_39;2023-01-03;2023-10-26;Report;1;Units;600.0;0.21;126.0;726.0;1210.0;Tesla;Sent;Services
+40;INVOICE_40;2023-09-26;2023-10-26;Product Testing;2;Hours;600.0;0.21;126.0;726.0;0;Tesla;Draft;Services
+40;INVOICE_40;2023-09-26;2023-10-26;Consult;2;Hours;700.0;0.21;147.0;847.0;726.0;Tesla;Draft;Services
+40;INVOICE_40;2023-09-26;2023-10-26;Sales;50;Units;500.0;No Tax;0.0;500.0;0;Tesla;Draft;Sales
+40;INVOICE_40;2023-08-10;2023-10-26;Consult;3;Units;1500.0;0.21;315.0;1815.0;1000.0;Apple;Draft;Services

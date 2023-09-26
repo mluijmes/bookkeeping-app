@@ -117,5 +117,5 @@ if tab == TAB_1:
                 ]
                 csv_row_formatted = ';'.join(map(str, csv_row))
                 func.append_loclist_row(csv_row_formatted, FILEPATH_CLIENTS)
-                st.info(f"{client_name} successfully added")
+                st.success(f"{client_name} successfully added", icon='✅')
 

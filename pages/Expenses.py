@@ -25,7 +25,7 @@ def add_expense(filepath, total_amount, date, seller, description, payment_metho
 st.title('Expense Receipts')
 
 # Create a form to collect expense details
-with st.form('Expense Form'):
+with st.form('Expense Form', clear_on_submit=True):
     total_amount = st.number_input('Total Amount', value=0.0, step=1.0, min_value=0.0) * -1
     date = st.date_input('Date')
     seller = st.text_input('Seller or Vendor')
@@ -42,7 +42,7 @@ with st.form('Expense Form'):
 if submit_button:
     # Add the expense to the CSV file
     add_expense(FILEPATH_EXPENSES, total_amount, date, seller, description, payment_method, invoice_number, tax_info, category, currency)
-    st.success('Expense added successfully.')
+    st.success('Expense added successfully.', icon='✅')
 
 # Display the current expenses in a table
 st.header('Current Expenses')

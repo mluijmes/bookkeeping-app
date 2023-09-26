@@ -202,7 +202,6 @@ if tab == TAB_NAME_1:
             activities = func.read_csv_rows(FILEPATH_ACTIVITIES)
             func.merge_csv_files(FILEPATH_INVOICES, FILEPATH_ACTIVITIES,FILEPATH_INVOICES)
             func.clear_csv(FILEPATH_ACTIVITIES)
-            st.experimental_rerun()
             st.success('Invoice successfully added.', icon='✅')
 
 
