@@ -1,0 +1,4 @@
+Invoice Number;Name;Date;Due Date;Activity;Quantity;Quantity Type;Amount;Tax Category;Tax Amount;Total Amount;Total Sum Amount;Client;Status;Category
+32;INVOICE_32;2023-09-10;2023-10-10;Checking;1;Hours;10.0;No Tax;0.0;10.0;0.0;TU Delft;Draft;Office Supplies
+33;INVOICE_33;2023-03-23;2023-10-10;Piano Sales;8;Hours;4400.0;No Tax;0.0;4400.0;0.0;TU Delft;Draft;Office Supplies
+35;INVOICE_35;2023-09-10;2023-10-10;Testing;55;Hours;1265.0;0.21;265.65;1530.65;0.0;TU Delft;Draft;Legal and Compliance

@@ -1,0 +1,10 @@
+Total Amount;Date;Seller or Vendor;Description;Payment Method;Invoice or Receipt Number;Tax Information;Category;Currency;Attachments
+-50.00;2023-01-01;ABC Store;Office Supplies;Credit Card;INV12345;5.00;Office Expenses;USD;attachment1.pdf
+-100.00;2023-02-03;XYZ Company;Travel Expense;Cash;INV54321;0.00;Travel;USD;attachment2.pdf
+-25.00;2023-04-05;Best Buy;Electronics Purchase;Debit Card;INV78900;2.50;Electronics;USD;attachment3.pdf
+-75.00;2023-05-07;Local Restaurant;Client Lunch;Credit Card;INV45678;7.50;Meals & Entertainment;USD;attachment4.pdf
+-200.00;2023-08-10;Amazon;Office Supplies;Online Payment;INV13579;10.00;Office Expenses;USD;attachment5.pdf
+-350.00;2023-08-12;ABC Electronics;Laptop Purchase;Credit Card;INV24680;17.50;Electronics;USD;attachment6.pdf
+-120.00;2023-09-15;Office Depot;Stationery Purchase;Debit Card;INV65432;6.00;Office Expenses;USD;attachment7.pdf
+-60.00;2023-09-18;Starbucks;Coffee Meeting;Cash;INV98765;0.00;Meals & Entertainment;USD;attachment8.pdf
+-500.00;2023-09-20;ABC Supplier;Raw Materials;Online Payment;INV11223;25.00;Supplies;USD;attachment9.pdf
