@@ -6,6 +6,7 @@ It is built with Streamlit. Manage clients, invoices, and expenses. It's designe
 
 ## Features
 
+
 ### Clients
 - View a list of clients with their contact information.
 - Add new clients to the client list.
